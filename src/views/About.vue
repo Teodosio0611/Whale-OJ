@@ -12,5 +12,5 @@ import { Options, Vue } from 'vue-class-component'
   components: {
   }
 })
-export default class HomeView extends Vue {}
+export default class About extends Vue {}
 </script>
