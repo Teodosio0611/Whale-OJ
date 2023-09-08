@@ -17,17 +17,17 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import { reactive } from 'vue'
-import { UserControllerService, UserLoginRequest } from '@/../generated'
+import { UserControllerService, UserLoginRequest } from '../../../generated'
 import message from '@arco-design/web-vue/es/message'
 const form = reactive({
   userAccount: '',
   userPassword: ''
-})
+} as UserLoginRequest)
 
 const handleSubmit = async () => {
-  const res = await UserControllerService.userLoginUsingPost()
+  const res = await UserControllerService.userLoginUsingPost(form)
   if (res.code === 0) {
     alert('登陆成功' + JSON.stringify(res.data))
   } else {
