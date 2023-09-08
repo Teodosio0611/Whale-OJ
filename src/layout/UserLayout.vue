@@ -1,8 +1,11 @@
 <template>
-  <div id="basicLayout">
+  <div id="userLayout">
   <a-layout style="min-height: 100vh;">
     <a-layout-header class="header">
-      用户布局
+      <a-space>
+        <img src="../assets/whale.png" class="logo" />
+        <div>Whale-OJ</div>
+      </a-space>
     </a-layout-header>
     <a-layout-content class="content">
       <router-view />
@@ -15,23 +18,25 @@
 </template>
 
 <style>
-#basicLayout {
-  box-shadow: #eee 1px 1px 5px;
+#userLayout {
+  text-align: center;
 }
 
-#basicLayout .header {
-  margin-bottom: 16px;
-  box-shadow: #eee 1px 1px 5px;
+#userLayout .logo {
+  width: 64px;
+  height: 64px;
 }
 
-#basicLayout .content {
-  background: linear-gradient(to right, #eee, #fff);
+#userLayout .header {
+  margin-top: 16px;
+}
+
+#userLayout .content {
   margin-bottom: 16px;
   padding: 20px;
 }
 
-#basicLayout .footer {
-  background: #efefef;
+#userLayout .footer {
   padding: 16px;
   position: sticky;
   bottom: 0;

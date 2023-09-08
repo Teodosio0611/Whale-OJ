@@ -24,7 +24,10 @@ export const routes: Array<RouteRecordRaw> = [
         name: '用户注册',
         component: UserRegisterView
       }
-    ]
+    ],
+    meta: {
+      hideInMenu: true
+    }
   },
   {
     path: '/home',
